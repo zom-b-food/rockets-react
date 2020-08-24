@@ -21,7 +21,7 @@ class NavComponent extends Component {
                     </NavDropdown>
                     </Nav>
                     <Form inline>
-                    <FormControl type="text" placeholder="Search" className="mr-sm-2" />
+                    <FormControl type="text" placeholder="" className="mr-sm-2" />
                     <Button variant="outline-secondary">Search</Button>
                     </Form>
                 </Navbar.Collapse>

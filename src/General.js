@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-const BASE_URL = "https://cors-anywhere.herokuapp.com/http://www.adam-marsh.com/data.json";
+const BASE_URL = "http://www.adam-marsh.com/data.json";
 class General extends Component {
     constructor(props) {
     super(props);
@@ -21,10 +21,11 @@ componentDidMount() {
     render() {
         var { items } = this.state;   
         return (
+          // Tags partial view in Column 4
              <div>
             <ul>
               {items.map(item => (
-                <li>
+                <li key={item}>
                   <strong>Name: </strong>{item.name}<br />
                   <strong>Flight #: </strong>{item.flight_number}<br />
                   <strong>Rocket: </strong>{item.rocket}<br />

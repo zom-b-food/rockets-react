@@ -3,16 +3,17 @@ import data from "./data/data";
 
 class Links extends Component {
 	render() {
-		return (
+    return (
+      // Links partial view in Column 3
       <div>
         {
           data.links.map((link) => {
             return (
-              <div>                  
+              <div key={link}>                  
                   {
                     link.patch.map((linkDetail) => {
                       return (
-                        <div className="scrolling">
+                        <div key={linkDetail} className="scrolling">
                           <span><strong>Patch</strong></span><br/>
                           {linkDetail.small}<br />
                           {linkDetail.large}<br />                               
@@ -24,7 +25,7 @@ class Links extends Component {
                   {
                     link.reddit.map((linkDetail) => {
                       return (
-                        <div className="scrolling">
+                        <div key={linkDetail} className="scrolling">
                           <span><strong>Reddit</strong></span><br/>
                           {linkDetail.campaign}<br />
                           {linkDetail.launch}<br />

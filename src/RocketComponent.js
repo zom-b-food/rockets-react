@@ -7,15 +7,14 @@ import General from './General';
 class RocketComponent extends Component {
     constructor(props) {
     super(props);
-    this.state = {   
-      items: []
-    }
-   
+      this.state = {
+        items: []
+      };
   }
   
    componentDidMount() {
     //this.setState({ isLoading: true })
-     fetch('https://cors-anywhere.herokuapp.com/http://www.adam-marsh.com/data.json')
+     fetch('http://www.adam-marsh.com/data.json')
        .then(res => res.json())
        .then(json => {
          this.setState({        
@@ -24,20 +23,20 @@ class RocketComponent extends Component {
        });
    }
     
-    render() { 
+  render() { 
       
         return (
             <div className="wrapper">
                 <div className="row">
-                    <div className="col-3"><h5>Ships</h5></div>
-                    <div className="col-3"><h5>Cores</h5></div>
-                    <div className="col-3"><h5>Links</h5></div>
-                    <div className="col-3"><h5>Top Tags</h5></div>
+                    <div className="col-3 first ships"><h5 className="sort">Ships</h5></div>
+                    <div className="col-3 second cores"><h5 className="sort">Cores</h5></div>
+                    <div className="col-3 third links"><h5 className="sort">Links</h5></div>
+                    <div className="col-3 tags"><h5 className="sort">Tags</h5></div>
                 </div>
                 <div className="row">
-                    <div className="col-3"><Ships></Ships></div>
-                    <div className="col-3"><Cores></Cores></div>
-                    <div className="col-3"><Links></Links></div>
+                    <div className="col-3 first"><Ships></Ships></div>
+                    <div className="col-3 second"><Cores></Cores></div>
+                    <div className="col-3 third"><Links></Links></div>
                     <div className="col-3"><General></General></div>
                 </div>                				   
           </div>

@@ -16,8 +16,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      title: 'Crazy SpaceX Project',
-      items: [],
+      title: 'My SpaceX Project',
       isLoaded: false,
     }
   }
@@ -25,23 +24,29 @@ class App extends Component {
   // Fetching json URL; results is json
    componentDidMount() {
     //this.setState({ isLoading: true })
-     fetch('https://cors-anywhere.herokuapp.com/http://www.adam-marsh.com/data.json')
+     fetch('http://www.adam-marsh.com/data.json')
        .then(res => res.json())
        .then(json => {
          this.setState({
            isLoaded: true,
-           items: json,
          })
        });
+   }
+  
+  // prevent memory leaks
+  componentWillUnmount() {
+    this._isMounted = false
   }
 
   render() {
-    var { isLoaded, items } = this.state;
+    var { isLoaded } = this.state;
+    
     // show my cool loading image
     if (!isLoaded) {
       return <div className="center mt200">Loading... <img src={Loading} alt="loading json" /></div>
     }
     else {
+      
       return (   
         // my layout and components
         <div className="App">
@@ -57,7 +62,7 @@ class App extends Component {
                 I focused on parsing/rendering the insane json. They wanted it to be "spacey" so I guess
                 that's what it is.</p>
                 <p>I have to admit that this was a very intense exercise for 'Web Developer 1', but I loved
-                every minute of it. Here are the components I created:
+                every minute of it. Here are the components I created:</p>
                  <ol>
                     <li>Popover1Component (Details Button)</li>
                     <li>Popover2Component (Upcoming Launches Button)</li>
@@ -74,17 +79,23 @@ class App extends Component {
                     <li>HeaderComponent</li>
                     <li>FooterComponent</li>
                     <li>NavComponent (just threw this one in here to check if bootstrap was working)</li>
-                  </ol></p>
+                </ol>
+                <p>My greatest challenge was the sort functionality. I saved this for last because I thought it would be easy,
+                and traversing the json nodes took more effort than I anticipated. I structured the app to render the 'table' data
+                in the RocketComponent. The data is loaded with partial views. There are no map functions in this approach so there are
+                no hooks on which to do the sorting. :( To make this work, I'll have to rearchitect the entire app without the partial views.
+                Having just discovered this today is like screaming into a dog whistle. Please have mercy and suggest some suitable ideas.  
+                </p>
               </div>
             </div>
           </div>
           <p>&nbsp;</p>  
           <div className="popovers">
-            <div class="row">            
-               <div class="col-6">
+            <div className="row">            
+               <div className="col-6">
                 <Popover1Component />
               </div>
-               <div class="col-6 right">
+               <div className="col-6 right">
                 <Popover2Component />
               </div>
             </div>

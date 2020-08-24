@@ -6,11 +6,11 @@ class FooterComponent extends Component {
         return (
         <div className="component">
             <div id="footer">
-                <div class="row">            
-                    <div class="col-6">
+                <div className="row">            
+                    <div className="col-6">
                         <img src={Logo} alt="exclamation labs"/>
                     </div>
-                    <div class="col-6 right light">
+                    <div className="col-6 right light">
                       designed by:  <img src="http://www.adam-marsh.com/pups.png" alt="designed by..."></img>
                     </div>
                 </div>              

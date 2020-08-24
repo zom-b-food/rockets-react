@@ -6,9 +6,10 @@ const shipsList = data.ships;
 class Ships extends Component {
 	render() {
         return (
+            // Ships partial view in Column 1
              <div>
                 <ul>
-                {shipsList.map(s => (<li>{s}</li>))}
+                {shipsList.map(s => (<li key={s}>{s}</li>))}
                 </ul>
             </div>
         );
