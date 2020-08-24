@@ -14,7 +14,7 @@ class RocketComponent extends Component {
   
    componentDidMount() {
     //this.setState({ isLoading: true })
-     fetch('http://www.adam-marsh.com/data.json')
+     fetch('https://cors-anywhere.herokuapp.com/http://www.adam-marsh.com/data.json')
        .then(res => res.json())
        .then(json => {
          this.setState({        
