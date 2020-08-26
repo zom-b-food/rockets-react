@@ -53,7 +53,7 @@ class App extends Component {
           <HeaderComponent />
           <NavComponent />
           <p>&nbsp;</p>
-          <div className="container">
+          <div className="container-fluid">
             <div className="title">
               <h1>{this.state.title}</h1>
               <div className="greetings">
@@ -81,7 +81,7 @@ class App extends Component {
                     <li>FooterComponent</li>
                     <li>NavComponent (just threw this one in here to check if bootstrap was working)</li>
                 </ol>
-                <p>My greatest challenge was the sort functionality. I saved this for last because I thought it would be easy,
+                <p>I present the faux table in two layouts. My greatest challenge was the sort functionality. I saved this for last because I thought it would be easy,
                 and traversing the json nodes took more effort than I anticipated. I structured the app to render the 'table' data
                 in the RocketComponent. The data is loaded with partial views. There are no map functions in this approach so there are
                 no hooks on which to do the sorting. :( To make this work, I'll have to rearchitect the entire app without the partial views.
