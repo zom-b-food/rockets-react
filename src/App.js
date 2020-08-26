@@ -24,7 +24,7 @@ class App extends Component {
   // Fetching json URL; results is json
    componentDidMount() {
     //this.setState({ isLoading: true })
-     fetch('https://cors-anywhere.herokuapp.com/http://www.adam-marsh.com/data.json')
+     fetch('https://cors-anywhere.herokuapp.com/http://www.adam-marsh.com/items.json')
        .then(res => res.json())
        .then(json => {
          this.setState({

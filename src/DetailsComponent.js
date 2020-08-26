@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-const BASE_URL = "https://cors-anywhere.herokuapp.com/http://www.adam-marsh.com/data.json";
+const BASE_URL = "https://cors-anywhere.herokuapp.com/http://www.adam-marsh.com/items.json";
 
 class DetailsComponent extends Component {
     constructor(props) {
