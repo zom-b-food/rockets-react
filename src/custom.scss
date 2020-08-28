@@ -142,15 +142,11 @@ ul {
 	overflow-wrap: break-word;
 }
 
-.first, .second, .third {
-	border-right:1px solid $color_4;
-}
-
-.ships, .cores, .links, .tags {
+.header {
 	background-color: $color_1;
-	border-bottom:2px solid $color_4;
 	color:$color_2;
-	padding-top:8px;
+	padding:6px;
+text-decoration:underline
 }
 
 // utility classes
