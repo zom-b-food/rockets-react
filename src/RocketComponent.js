@@ -23,6 +23,11 @@ class RocketComponent extends Component {
        });
    }
     
+   // prevent memory leaks
+  componentWillUnmount() {
+    this._isMounted = false
+  }
+  
   render() { 
       
         return (

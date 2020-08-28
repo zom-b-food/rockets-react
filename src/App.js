@@ -61,8 +61,7 @@ class App extends Component {
                 <p>So, my two remote co-workers (Rufus and Rutger) insisted on designing this app while
                 I focused on parsing/rendering the insane json. They wanted it to be "spacey" so I guess
                 that's what it is.</p>
-                <p>I have to admit that this was a very intense exercise for a Web Developer 1 position, but I loved
-                every minute of it. I used the json listed on the wiki but it didn't have an upcoming launches array so I added
+                <p>The json listed on the wiki didn't have an upcoming launches array so I added
                 one and staged it on my personal server. Here are the components I created:</p>
                  <ol>
                     <li>Popover1Component (Details Button)</li>
@@ -81,12 +80,7 @@ class App extends Component {
                     <li>FooterComponent</li>
                     <li>NavComponent (just threw this one in here to check if bootstrap was working)</li>
                 </ol>
-                <p>I present the faux table in two layouts. My greatest challenge was the sort functionality. I saved this for last because I thought it would be easy,
-                and traversing the json nodes took more effort than I anticipated. I structured the app to render the 'table' data
-                in the RocketComponent. The data is loaded with partial views. There are no map functions in this approach so there are
-                no hooks on which to do the sorting. :( To make this work, I'll have to rearchitect the entire app without the partial views.
-                Having just discovered this today is like screaming into a dog whistle. Anyway, here you go.  
-                </p>
+               
               </div>
             </div>
           </div>

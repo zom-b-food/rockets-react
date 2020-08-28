@@ -17,7 +17,12 @@ componentDidMount() {
                 items:json,
           })
       })
-    }
+}
+  
+   // prevent memory leaks
+  componentWillUnmount() {
+    this._isMounted = false
+  }
     
 render() {
     var { items } = this.state;   
